@@ -53,7 +53,7 @@ spec:
                   echo ${BUILD_NUMBER}
                   echo $REPO_PRIVATE_TOKEN
                   apt update -y && apt install -y git
-                  git clone https://oauth2:${REPO_PRIVATE_TOKEN}@github.com/ashaik65/jenkins-kaniko.git
+                  git clone https://oauth2:${REPO_PRIVATE_TOKEN}@github.com/Abhishek123-Burman/jenkins-kaniko.git
                   ls
 
                '''
@@ -74,7 +74,7 @@ spec:
              pwd
              cd jenkins-kaniko/jenkins-k8-cicd-main
              ls
-            /kaniko/executor --context `pwd` --destination ashaik65/kaniko:${BUILD_NUMBER}
+            /kaniko/executor --context `pwd` --destination abhi3490/kaniko:${BUILD_NUMBER}
           '''
         }
 
@@ -126,7 +126,7 @@ spec:
                   git clone https://oauth2:${HELM_REPO_PRIVATE_TOKEN}@github.com/ashaik65/k8-helm.git
                   ls
                   cd k8-helm/k8-helm-main
-                  helm upgrade --install hello -f charts/hello/values.yaml --set image.repository=ashaik65/kaniko:${BUILD_NUMBER} --namespace hello charts/hello/ --atomic --timeout 1m25s --cleanup-on-fail
+                  helm upgrade --install hello -f charts/hello/values.yaml --set image.repository=abhi3490/kaniko:${BUILD_NUMBER} --namespace hello charts/hello/ --atomic --timeout 1m25s --cleanup-on-fail
                '''
               }
             }
