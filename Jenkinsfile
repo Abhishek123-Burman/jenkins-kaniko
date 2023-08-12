@@ -123,7 +123,7 @@ spec:
                   curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
                   chmod 700 get_helm.sh
                   ./get_helm.sh
-                  git clone https://oauth2:${HELM_REPO_PRIVATE_TOKEN}@github.com/ashaik65/k8-helm.git
+                  git clone https://oauth2:${HELM_REPO_PRIVATE_TOKEN}@github.com/Abhishek123-Burman/k8-helm.git
                   ls
                   cd k8-helm/k8-helm-main
                   helm upgrade --install hello -f charts/hello/values.yaml --set image.repository=abhi3490/kaniko:${BUILD_NUMBER} --namespace hello charts/hello/ --atomic --timeout 1m25s --cleanup-on-fail
